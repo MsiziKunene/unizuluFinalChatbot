@@ -1,0 +1,153 @@
+<!--cleaning the code-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Bot</title>
+
+    <link rel="stylesheet" href="/CSS/chatbox.css" />
+    <link rel="stylesheet" href="/CSS/homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- My Code follows-->
+    <div class="welcomePage">
+      <nav>
+        <div class="header">
+          <a href="#default" class="logo">University of Zululand Chatbot</a>
+
+          <div class="header-right">
+            <input type="checkbox" id="check" />
+            <label for="check" class="chekbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+              <li>
+                <a
+                  id="active"
+                  class="list"
+                  href="mailto:chatbot@unizulu.ac.za"
+                  target="_blank"
+                  >Feedback</a
+                >
+              </li>
+              <li><a class="list" href="#contact">Contact </a></li>
+              <li><a class="list" href="/about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="welcomeMessage">
+        <p>
+          <span style="--delay: 0s">
+            Greetings! Nice to meet you in the digital realm.I'm here to lend
+            you a</span
+          >
+          <span style="--delay: 1s">
+            virtual hand and tackle any questions or concern you may have based
+            on the institution.</span
+          >
+          <span style="--delay: 2.5s">
+            knowledge and capabilities are at your disposal, so don't hesitate
+            to ask anything.</span
+          >
+          <span style="--delay: 3s"> How can I be of help to you today?</span>
+        </p>
+      </div>
+      <div class="varPic">
+        <img
+          class="campusPic"
+          id="pictur1"
+          src="/photos/Campus-ADMIN-AERIAL.jpg"
+          alt="campus"
+        />
+        <img class="campusPic" src="/photos/AL.jpg" alt="residence" />
+        <img class="campusPic" src="/photos/campus.jpg" alt="admin" />
+        <img
+          class="campusPic"
+          src="/photos/library.jpg"
+          alt="computer science dep"
+        />
+      </div>
+    </div>
+
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        <i id="chat-icon" style="color: #fff" class="fa fa-comments-o"></i>
+        Chat with us!
+        <i id="chat-icon" style="color: #fff" class="fa fa-commenting"></i>
+      </button>
+
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <div>
+                  <span>
+                    <!-- <i class="fas fa-robot" style="background-color: blue"></i> -->
+                    <p id="botStarterMessage" class="botText">
+                      <span>Loading...</span>
+                    </p>
+                  </span>
+                </div>
+              </div>
+
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Ask a question"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <i
+                    id="chat-icon"
+                    style="color: blue"
+                    class="fa fa-fw fa-thumbs-up"
+                    onclick="heartButton()"
+                  ></i>
+                  <i
+                    id="chat-icon"
+                    style="color: #333"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript includes at the end of the body for better performance -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="JavaScript/chatbox.js"></script>
+    <script src="JavaScript/hardResponse2.js"></script>
+  </body>
+</html>

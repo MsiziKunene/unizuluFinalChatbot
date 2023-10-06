@@ -1,0 +1,308 @@
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-image: url(/photos/backgroundcolor.png);
+    position: fixed;
+    display: flex;
+    min-height: 100vh;
+}
+
+.welcomePage {
+    margin-left: 0%;
+}
+
+.welcomePage header img {
+    display: flex;
+}
+
+.welcomePage .header header {
+    overflow: hidden;
+    width: 1800px;
+    padding: 9px 10px;
+}
+#about{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -150%;
+    margin:0px 5px 0px 0px;
+    line-height: 0px;
+    transition: all .5s;
+    list-style: none;
+}
+
+/* Style the header links */
+.welcomePage .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 4px;
+}
+
+/* Style the logo link */
+.welcomePage .header a.logo {
+
+    font-size: 25px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.welcomePage .header img {
+    margin-bottom: 30px;
+} 
+.welcomePage .header ul li {
+         display: inline-block;
+
+         background-color: none;
+        }
+
+/* Change the background color on mouse-over */
+.welcomePage .header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the active/current link */
+.welcomePage .header a#active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+.welcomePage .header-right {
+    float: right;
+}
+
+nav ul {
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+nav ul li {
+    display: block;
+    margin-top: 0%;
+    margin: 0 5px;
+}
+
+label {
+    padding: 15px;
+    font-size: 30px;
+    float: right;
+    line-height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (min-width: 500px) {
+    label {
+        visibility: hidden;
+        padding: 9px 10px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .welcomePage .welcomeMessage p {
+        visibility: hidden;
+    }
+
+    .welcomePage .header header {
+        overflow: hidden;
+        height: 20px;
+        width: 1800px;
+    }
+
+    .welcomePage .header a.logo {
+        font-size: 15px; /*from 13 to 10*/
+        font-weight: bold;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -150%;
+        margin:0px 5px 0px 0px;
+        line-height: 0px;
+        transition: all .5s;
+        list-style: none;
+    }
+
+
+    label {
+        padding: 9px 40px;   /* from 9px 60px : 9px 0px */
+    }
+   
+
+  
+
+    .welcomePage .header a:hover {
+        background-color: none;
+        color: red;
+    }
+
+    .welcomePage .header a:active {
+        background-color: none;
+        color: red;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    @media screen and (max-width: 290px) {
+        .welcomePage {
+            max-width: 280px;
+        }
+        label {
+            padding: 9px 0px;   /* from 9px 60px : 9px 0px */
+        }
+        
+    .welcomePage .header a.logo {
+        font-size: 10px; /*from 13 to 10*/
+        font-weight: bold;
+    }
+
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            top: 80px;
+            left: -150%;
+            text-align: center;
+            transition: all .5s;
+        }
+        .welcomePage .header ul li {
+         display: grid;
+         margin:20px 60px 0px -30px;
+         background-color: none;
+        }
+
+        label .checkbtn {
+            display: grid;
+        }
+
+        #check:checked ~ ul {
+            left: 0;
+        }
+        a.list{
+            display:grid;
+        }
+    }
+}
+
+.welcomePage .varPic img {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    top: 40%;
+    left: 10%;
+    bottom: 50%;
+    padding-right: 20px;
+    box-shadow: 10px 10px 10px 10px;
+}
+
+.welcomePage .varPic .campusPic:nth-child(1) {
+    animation: zoomAnimation 30s infinite, blurAnimation 20s infinite;
+    animation-delay: 1.5ms;
+}
+
+.welcomePage .varPic .campusPic:nth-child(2) {
+    animation: zoomAnimation 30s infinite, blurAnimation 20s infinite;
+    animation-delay: 0.1s;
+}
+
+.welcomePage .varPic .campusPic:nth-child(3) {
+    animation: zoomAnimation 30s infinite, blurAnimation 20s infinite;
+    animation-delay: 0.14s;
+}
+
+.welcomePage .varPic .campusPic:nth-child(4) {
+    animation: zoomAnimation 30s infinite, blurAnimation 20s infinite;
+    animation-delay: 0.18s;
+}
+
+.welcomePage .welcomeMessage p {
+    margin-top: 5%;
+    margin-left: 0%;
+    margin-right: 7%;
+    position: relative;
+    top: 60%;
+    left: 10%;
+    bottom: 50%;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Gill Sans';
+    font-size: 40px;
+}
+
+.welcomePage .welcomeMessage p span {
+    background: linear-gradient(to right, gold, rgb(11, 42, 142));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    opacity: 0;
+    animation: sweetMessage 4s forwards var(--delay);
+}
+
+/* Stack flow animation */
+@keyframes sweetMessage {
+    from {
+        translate: 0 20px;
+    }
+    to {
+        translate: none;
+        opacity: 1;
+    }
+}
+
+/* Picture animations */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(400%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+@keyframes zoomAnimation {
+    60% {
+        transform: scale(0.8) translateX(-100%);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blurAnimation {
+    50% {
+        filter: blur(0px);
+    }
+}
